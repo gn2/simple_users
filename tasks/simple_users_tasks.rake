@@ -3,7 +3,7 @@ namespace :simple_users do
   desc "Sync extra files from simple_users plugin"
   task :sync do
     system "rsync -ruv vendor/plugins/simple_users/db/migrate db"
-    system "rsync -ruv vendor/plugins/simple_users/public ."
+    # system "rsync -ruv vendor/plugins/simple_users/public ."
   end
 
   namespace :bootstrap do
