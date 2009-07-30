@@ -1,0 +1,23 @@
+%h2.page_title 
+  My Account
+  %ul
+    %li= link_to "Edit my account", edit_user_path(current_object)
+%p
+  %span.key Login: 
+  %span.value= h current_object.login
+%p
+  %span.key Name: 
+  %span.value= h current_object.name
+%p
+  %span.key Contact email:
+  %span.value= h current_object.email
+%p 
+  %span.key Last login:
+  %span.value= h current_object.last_login_at.strftime("%d/%m/%Y at %H:%M") if !current_object.last_login_at.nil?
+%p 
+  %span.key Last login IP:
+  %span.value= h current_object.last_login_ip if !current_object.last_login_ip.nil?
+
+-if current_object.is_admin?
+  %p
+    %span.large Your have an administrator account.

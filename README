@@ -1,0 +1,22 @@
+Simple-users
+============
+
+Dependencies:
+config.gem "haml"
+config.gem "faker"
+config.gem "mocha"
+config.gem "jchupp-is_paranoid", :lib => 'is_paranoid', :version => ">= 0.0.1"
+config.gem "rubyist-aasm", :lib => 'aasm', :version => ">= 0.0.1"
+
+Plugins:
+machinist
+make_resourceful
+shoulda
+simple_config
+simple_state_machine_history
+
+Variables which can be set from other modules
+=============================================
+SimpleConfig::SimpleUsers.after_login_path
+
+Copyright (c) 2009 [name of plugin creator], released under the GPLv3 license
